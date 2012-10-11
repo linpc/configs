@@ -1,0 +1,38 @@
+# conkyrc file for dzen
+###
+
+# out_to_x
+# When set to no, there will be no output in X (useful when you also  use  things  like
+# out_to_console).  If you set it to no, make sure that it's placed before all other X-
+# related setting (take the first line of your configfile to be sure). Default value is yes
+
+own_window_transparent yes
+
+# enable Double Buffer Extension (DBE) supporty
+double_buffer yes
+
+use_xft yes
+xftfont WenQuanYi Zen Hei:size=24
+xftalpha 0.6
+
+out_to_x no
+
+background no
+out_to_console yes
+override_utf8_locale yes
+update_interval 1
+total_run_times 0
+# mpd_host 192.168.0.5
+# mpd_port 6600
+
+# Gap between borders of screen and text
+# same thing as passing -x at command line
+gap_x 12
+gap_y 12
+
+# ${battery_time} 
+
+TEXT
+${battery_short} [ wlan0: ^fg(\#909090)${downspeedf wlan0} / ${upspeedf wlan0}^fg() ] Cpu: ^fg(\#6fff90)${cpu}%^fg()  Mem: ^fg(\#6fff90)${memperc}%^fg() - ^fg(\#ffffff)${time %a %b %d %H:%M:%S}  
+
+# [ ^ca(1, mpc toggle)${mpd_status}^ca() ${if_mpd_playing}- ${mpd_elapsed}/${mpd_length}$endif ] ^fg(\#909090)^ca(1, mpc next)${mpd_title}^ca()^fg() by ^fg(\#909090)${mpd_artist}^fg() from ^fg(\#909090)${mpd_album}^fg()  Cpu: ^fg(\#909090)${cpu}%^fg()  Mem: ^fg(\#909090)${memperc}%^fg()  Net: ^fg(\#909090)${downspeedf eth0} / ${upspeedf eth0}^fg()  ${time %a %b %d %H:%M}  

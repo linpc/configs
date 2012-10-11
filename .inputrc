@@ -1,0 +1,4 @@
+set match-hidden-files off
+# Control-u: kill-whole-line
+"\e[A": history-search-backward
+"\e[B": history-search-forward

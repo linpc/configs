@@ -1,0 +1,1 @@
+viewer --draw-filename --draw-tinted --font "Monaco_Linux/12" --fontpath /usr/share/fonts/TTF --scale-down

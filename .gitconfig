@@ -1,0 +1,22 @@
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	di = diff --color-words
+	gl = log --decorate --graph --pretty=oneline
+	glog = log --decorate --graph
+	st = status --short
+	show-graph = log --graph --abbrev-commit --pretty=oneline
+
+[color]
+	ui = auto
+
+[core]
+	preloadindex = yes
+
+[merge]
+	tool = vimdiff
+
+[user]
+	name = linpc
+	email = linpc@cs.nctu.edu.tw

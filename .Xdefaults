@@ -1,0 +1,85 @@
+! linux.die.net/man/1/urxvt
+! set to 32-bit for real transparency (compositing required (see xcompmgr)
+! http://jiyixx.blogspot.tw/2012/01/urxvt.html
+URxvt.termName:		xterm-256color
+URxvt.title:		xterm
+URxvt.font:		xft:MONACO:size=16:antialias=true, xft:WenQuanYi Zen Hei Mono:size=16:antialias=true,xft:LiHei_ProPC:pixelsize=16:antialias=true
+URxvt.boldFont:		xft:MONACO:bold:size=16:antialias=true, xft:WenQuanYi Zen Hei Mono:size=16:antialias=true,xft:LiHei_ProPC:bold:pixelsize=16:antialias=true
+
+
+! transparent
+URxvt.foreground:	White
+URxvt.depth:		32
+URxvt.cursorColor:	green
+URxvt.urgentOnBell:     true
+URxvt.background:	rgba:1111/1111/1111/dddd
+
+
+! scrollBar
+URxvt.saveLines:	4096
+URxvt.scrollBar:	True
+URxvt.scrollstyle:	plain
+URxvt.scrollBar_right:	True
+!URxvt.scrollBar_floating:False
+URxvt.scrollBar_align:	centre
+URxvt.scrollTtyOutput:	False
+URxvt.scrollWithBuffer:	False
+URxvt.scrollTtyKeypress:True
+! Enable Shift-PageUp/Down in screen
+URxvt.secondaryScroll:  true
+
+
+!URxvt.perl-ext-common: default,tabbed
+! URxvt.perl-ext-common: default,clipboard
+
+
+! inputMethod
+URxvt.inputMethod:	ibus
+URxvt.preeditType:	OverTheSpot
+
+
+! tabs color
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    7
+URxvt.tabbed.tab-bg:    2
+
+
+! function keys
+URxvt.iso14755:		False
+! Use Control + Shift + [OP] to copy/paste
+!URxvt.keysym.C-M-O:	perl:clipboard:copy
+!URxvt.keysym.C-M-P:	perl:clipboard:paste
+!
+
+
+! keysym: keybindings
+! http://r.untroubled.be/docs/urxvt/urxvt_keys_vim.html
+! Using ``xev'' to get the spellings of key
+URxvt.keysym.M-Up:      \033[1;3A
+URxvt.keysym.M-Down:    \033[1;3B
+URxvt.keysym.M-Right:   \033[1;3C
+URxvt.keysym.M-Left:    \033[1;3D
+URxvt.keysym.M-Prior:   \033[5;3~
+URxvt.keysym.M-Next:    \033[6;3~
+URxvt.keysym.M-End:     \033[1;3F
+URxvt.keysym.M-Home:    \033[1;3H
+
+! C-kjlh
+!URxvt.keysym.C-Up:      \033[1;5A
+!URxvt.keysym.C-Down:    \033[1;5B
+!URxvt.keysym.C-Right:   \033[1;5C
+!URxvt.keysym.C-Left:    \033[1;5D
+URxvt.keysym.C-Up:      \033[A
+URxvt.keysym.C-Down:    \033[B
+URxvt.keysym.C-Right:   \033[C
+URxvt.keysym.C-Left:    \033[D
+URxvt.keysym.C-Prior:   \033[5;5~
+URxvt.keysym.C-Next:    \033[6;5~
+URxvt.keysym.C-End:     \033[1;5F
+URxvt.keysym.C-Home:    \033[1;5H
+
+URxvt.keysym.F1:	\033
+
+URxvt*keysym.Home:	\033[1~
+URxvt*keysym.End:	\033[4~
