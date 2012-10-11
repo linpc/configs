@@ -1,0 +1,51 @@
+defscrollback 2048
+#caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
+#caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H | %M %d - %c:%s"
+#hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %M %d %0c:%s "
+# 11-09-08
+#caption always "%{= kw}%-w%{= BW}[%n]%t%{-}%+w %-= %{= .K}[%e]%{= .w} | %M %d - %c:%s"
+#ori caption always "%{= kw}%-w%{= BW} %t %{-}%+w %-= %{= .K}[%e]%{= .w} | %M %d - %c:%s"
+caption always "%{= kw}%-w%{= BW} %t %{-}%+w %-= %{= .K}[%e]%{= .w} | %m-%d %c:%s"
+# caption always "%{= wk} %{= KY} [%n]%t @ %H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %C:%s %A %{-} "
+
+# default
+# escape ^Aa
+escape ^\\\
+bind A title
+
+# make F12 == screen-command
+bindkey -k F2 command
+
+# C-Up, C-Down to move current tab.
+bindkey "^[[1;5B" next
+bindkey "^[O5B" next
+bindkey "^[[B" next
+bindkey "^[[1;5A" prev
+bindkey "^[O5A" prev
+bindkey "^[[A" prev
+
+# C-n $num : move current window to number $num
+# bindkey -k k5 select 10
+# bindkey -k k6 select 11
+# bindkey -k k7 select 12
+bind q select 11
+bind w select 12
+bind e select 13
+bind r select 14
+bind t select 15
+bind y select 16
+bind u select 17
+bind i select 18
+bind o select 19
+bind p select 10
+
+# encoding
+defencoding utf8
+bind b encoding big5 utf8
+bind u encoding utf8 utf8
+
+allpartial off
+altscreen on
+defc1 off
+
+cjkwidth off

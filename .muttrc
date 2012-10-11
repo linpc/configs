@@ -1,0 +1,66 @@
+# http://www.cublog.cn/u2/73535/showart_1434321.html
+#set strict_mime=no
+set folder=~/.config/Mail
+set record=~/.config/Mail/sent
+set editor=vim
+# set sort=threads
+set check_new=yes
+set charset="UTF-8"
+set send_charset="UTF-8:big5"
+set locale="zh_TW.UTF-8"
+charset-hook ^us-ascii$ big5
+charset-hook iso-8859-1 big5
+charset-hook !UTF-8 big5
+set assumed_charset="utf-8:big5"
+set rfc2047_parameters=yes
+set indent_str="> "
+set index_format="%5C %Z %{%b %d} %-15.15L (%4l) %s"
+
+# set from="XXXX <xxx@xxx.xxx.xxx>"
+
+# http://michael-prokop.at/computer/config/.mutt/color.header
+color header       red      black    "date: "
+color header       green    black    "^from "
+color header       red      black    "^To: "
+color header       red      black    "^From: "
+color header       green    black    "^Reply-To: "
+color header       green    black    "^Return-Path: "
+color header       green    black    "^X-Original-To: "
+# color header       white    red      "from: "
+# color header       green    black    "sender: "
+
+color hdrdefault brightblue   default
+color quoted     green        default
+color signature  black        default
+color indicator  brightwhite  magenta
+color attachment black        green
+color error      red          default
+color message    white        default
+color search     brightwhite  magenta
+color status     brightyellow blue
+color tree       red          default
+# color tree       white        default
+color normal     white        default
+color tilde      green        default
+color bold       brightyellow default
+color markers    red          default
+color index  brightwhite    red ~N
+color index  red    default ~O
+color index  brightblack    default ~D
+mono bold      bold
+mono underline underline
+mono indicator reverse
+
+auto_view text/html
+
+# key bind
+bind	index	<end>	last-entry
+bind	index	w	sync-mailbox
+bind	index	$	set-flag
+bind	index	G	last-entry
+
+bind	pager	G	bottom
+bind	pager	<up>	previous-line
+bind	pager	<down>	next-line
+
+# set signature="~/.config/.signature"
