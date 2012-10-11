@@ -1,22 +1,21 @@
 #
 cd "${HOME}"
 #
-alias rm="/usr/bin/rm -i"
-alias mv="/usr/bin/mv -i"
-alias cp="/usr/bin/cp -i"
+alias rm="rm -i"
+alias mv="mv -i"
+alias cp="cp -i"
 alias SYNC="sync; sync; sync"
 alias c="clear"
 alias cd..="cd .."
 alias j="jobs"
 alias f="finger"
 alias g="grep --color=auto"
-alias which="alias | /usr/bin/which -i"
+alias which="alias | which -i"
 alias more="most"
 alias ssh="ssh -4 -C -e none -v"
 alias t="telnet"
 alias p8="ping 8.8.8.8"
 
-alias sqlab='xfreerdp -D -g 99% -u linpc sqduty.cs.nctu.edu.tw:30790'
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 
 #
@@ -99,13 +98,4 @@ fi
 [[ -s "/etc/bash_completion" ]] && source "/etc/bash_completion"
 [[ -s "/usr/local/etc/bash_completion" ]] && source "/usr/local/etc/bash_completion"
 
-#
-# [[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
-
-# .inputrc
-#bind '"\e[A": history-search-backward'
-#bind '"\e[B": history-search-forward'
-# bind -m "\C-u" unix-line-discard
-
-#bind -m emacs '"\C-u": kill-whole-line'
-
+[[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
