@@ -66,6 +66,7 @@ fi
 . ~/.myconfig/.bash/color.bash
 . ~/.myconfig/.bash/power_status.bash
 . ~/.myconfig/.bash/pause.bash
+. ~/.myconfig/.bash/git.bash
 
 if [ -z "$WINDOW" ]; then
 PROMPT_COMMAND='\
@@ -76,7 +77,9 @@ PROMPT_COMMAND='\
     fi; \
     echo -ne "$RR "; \
 '
-   myPS="${ENDC}${green}\u${ENDC}@${cyan}\h${ENDC} [${green}\w${ENDC}] [${cyan}\A${ENDC}] "
+#   myPS="${ENDC}${green}\u${ENDC}@${cyan}\h${ENDC} [${green}\w${ENDC}] [${cyan}\A${ENDC}] "
+   myPS="${ENDC}${green}\u${ENDC}@${cyan}\h${ENDC} [${green}\w${ENDC}]${yellow}\$(git_since_last_commit)${CYAN}\$(git_branch)${ENDC} " 
+
    mtype=`echo \`hostname\` | awk '{print substr($0, length -1, 2)}'`
 
     if [ "$mtype" = "NB" ]; then
@@ -85,13 +88,16 @@ PROMPT_COMMAND='\
 	PS1="${myPS}"
     fi
 
+#    if [ $((COLUMNS)) -le 75 ]; then
+#	PS1="\u [\w] \n$ "
+#    fi
 else
     PS1='\[\e[0m\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h\[\e[0m\] [\[\e[32m\]\w\[\e[0m\]] [\[\e[36m\]\A\[\e[0m\]/\[\e[36m\]W$WINDOW\[\e[0m\]] '
 fi
 
 #
 # [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 # [[ -s "$HOME/perl5/perlbrew/etc/bashrc" ]] && source "$HOME/perl5/perlbrew/etc/bashrc"
 
 #
@@ -99,3 +105,14 @@ fi
 [[ -s "/usr/local/etc/bash_completion" ]] && source "/usr/local/etc/bash_completion"
 
 [[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
+
+
+PATH="$PATH:$HOME/.rvm/bin"	# Add RVM to PATH for scripting
+
+# vi mode
+set -o vi
+bind -m vi-insert "C-l":clear-screen
+# bind -m vi-insert "jj":vi-movement-mode
+bind -m vi-insert 'C-a':beginning-of-line
+bind -m vi-insert "C-n":history-search-backward
+bind -m vi-insert "C-x":history-search-forward

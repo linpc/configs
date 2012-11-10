@@ -34,5 +34,3 @@ gap_y 12
 
 TEXT
 ${battery_short} [ wlan0: ^fg(\#909090)${downspeedf wlan0} / ${upspeedf wlan0}^fg() ] Cpu: ^fg(\#6fff90)${cpu}%^fg()  Mem: ^fg(\#6fff90)${memperc}%^fg() - ^fg(\#ffffff)${time %a %b %d %H:%M:%S}  
-
-# [ ^ca(1, mpc toggle)${mpd_status}^ca() ${if_mpd_playing}- ${mpd_elapsed}/${mpd_length}$endif ] ^fg(\#909090)^ca(1, mpc next)${mpd_title}^ca()^fg() by ^fg(\#909090)${mpd_artist}^fg() from ^fg(\#909090)${mpd_album}^fg()  Cpu: ^fg(\#909090)${cpu}%^fg()  Mem: ^fg(\#909090)${memperc}%^fg()  Net: ^fg(\#909090)${downspeedf eth0} / ${upspeedf eth0}^fg()  ${time %a %b %d %H:%M}  

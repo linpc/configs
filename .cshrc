@@ -5,7 +5,6 @@
 # see also csh(1), environ(7).
 #
 
-# set prompt = "%B%n [%~] % "
 set prompt = "%B%m%b [%~] -%n- "
 set histfile="~/.config/.history"
 
@@ -54,21 +53,11 @@ if ($?prompt) then
 	set savehist = 100
 #	set mail = (/var/mail/$USER)
 	if ( $?tcsh ) then
-#		set prompt = "%B%n@%m [%~] % "
-##		set prompt = "%B%n [%~] % "
 		bindkey "^W" backward-delete-word
 		bindkey -k up history-search-backward
 		bindkey -k down history-search-forward
 	endif
-#	if("$TERM" == "xterm" || "$TERM" == "xterm-color") then
-##		set prompt = "%{\e]2\;%m [%/]^g\e]1;%m^g%}""$prompt"
-#		set prompt = "%{\e]2\;bsd [%/]^g\e]1;%m^g%}""$prompt"
-#	endif
 endif
-
-# if ($?WINDOW) then
-# 	source ~/.config/.login
-# endif
 
 #colorful man
 setenv LESS_TERMCAP_mb '[38;5;135m'	# begin blinking

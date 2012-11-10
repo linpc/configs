@@ -1,6 +1,19 @@
+function acpi-on()
+{ acpi_prompt=1; }
+
+function acpi-off()
+{ acpi_prompt=0; }
+
+acpi-on
+
 function get_power_status()
 {
     if [ $((COLUMNS)) -le 75 ]; then
+	echo -ne "\r"
+	return
+    fi
+
+    if [ ${acpi_prompt} -eq 0 ]; then
 	echo -ne "\r"
 	return
     fi
@@ -30,4 +43,3 @@ function get_power_status()
     echo -ne "\r\e[${span_length}C${color}$charge${xENDC}\r"
 }
 
- 
