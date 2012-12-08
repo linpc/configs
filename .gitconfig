@@ -2,6 +2,7 @@
 	s = status
 	br = branch
 	ci = commit
+	ca = commit --amend
 	co = checkout
 	di = diff --color-words
 	dw = diff --word-diff
@@ -26,7 +27,7 @@
 [core]
 	preloadindex = yes
 	editor = vim
-#	pager = less -+$LESS -FRX
+	pager = less -FSRX
 
 [merge]
 	tool = vimdiff
