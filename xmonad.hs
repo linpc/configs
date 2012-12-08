@@ -92,7 +92,10 @@ keysToAdd x =
     , ((0           , xF86XK_AudioRaiseVolume ), spawn "amixer -q set Master 2dB+ unmute")
 
     -- Lock screen: Fn + F2
-    , ((0           , 0x1008FF2D ), spawn "xscreensaver-command --lock")  
+    , ((0           , 0x1008FF2D ), spawn "xscreensaver-command --lock")
+
+    -- Toggle screen randr
+    , ((0           , xF86XK_Display ), spawn "/home/linpc/.toggle-xrandr-mode.bash")
 
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.

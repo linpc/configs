@@ -3,8 +3,8 @@
 ! http://jiyixx.blogspot.tw/2012/01/urxvt.html
 URxvt.termName:		xterm-256color
 URxvt.title:		xterm
-URxvt.font:		xft:MONACO:size=16:antialias=true, xft:WenQuanYi Zen Hei Mono:size=16:antialias=true,xft:LiHei_ProPC:pixelsize=16:antialias=true
-URxvt.boldFont:		xft:MONACO:bold:size=16:antialias=true, xft:WenQuanYi Zen Hei Mono:size=16:antialias=true,xft:LiHei_ProPC:bold:pixelsize=16:antialias=true
+URxvt.font:		xft:MONACO:size=14:antialias=true, xft:WenQuanYi Zen Hei Mono:size=14:antialias=true,xft:LiHei_ProPC:pixelsize=14:antialias=true
+URxvt.boldFont:		xft:MONACO:bold:size=14:antialias=true, xft:WenQuanYi Zen Hei Mono:size=14:antialias=true,xft:LiHei_ProPC:bold:pixelsize=14:antialias=true
 
 
 ! transparent

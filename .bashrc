@@ -10,11 +10,10 @@ alias cd..="cd .."
 alias j="jobs"
 alias f="finger"
 alias g="grep --color=auto"
-alias which="alias | which -i"
 alias more="most"
 alias ssh="ssh -4 -C -e none -v"
 alias t="telnet"
-alias p8="ping 8.8.8.8"
+alias 8="ping 8.8.8.8"
 
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 
@@ -55,6 +54,7 @@ if [ "`uname -s`" == "FreeBSD" -o "`uname -s`" == "Darwin" ]; then
     alias ls="/bin/ls -aFG"
     alias w="/usr/bin/w -i"
 elif [ "`uname -s`" == "Linux" ]; then
+    alias which="alias | which -i"
 #    alias ls="/bin/ls -aF --color=always"
     alias ls="/bin/ls -F --color=always"
 else

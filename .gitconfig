@@ -2,6 +2,7 @@
 	s = status
 	br = branch
 	ci = commit
+	ca = commit --amend
 	co = checkout
 	di = diff --color-words
 	dw = diff --word-diff
