@@ -27,7 +27,7 @@
 [core]
 	preloadindex = yes
 	editor = vim
-#	pager = less -+$LESS -FRX
+	pager = less -FSRX
 
 [merge]
 	tool = vimdiff
