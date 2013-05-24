@@ -5,8 +5,8 @@ set record=~/.config/Mail/sent
 set editor=vim
 # set sort=threads
 set check_new=yes
-set charset="UTF-8"
-set send_charset="UTF-8:big5"
+set charset="utf-8"
+set send_charset="utf-8:big5"
 set locale="zh_TW.UTF-8"
 charset-hook ^us-ascii$ big5
 charset-hook iso-8859-1 big5
@@ -22,6 +22,7 @@ set index_format="%5C %Z %{%b %d} %-15.15L (%4l) %s"
 color header       red      black    "date: "
 color header       green    black    "^from "
 color header       red      black    "^To: "
+color header       red      black    "^CC: "
 color header       red      black    "^From: "
 color header       green    black    "^Reply-To: "
 color header       green    black    "^Return-Path: "
@@ -45,7 +46,7 @@ color tilde      green        default
 color bold       brightyellow default
 color markers    red          default
 color index  brightwhite    red ~N
-color index  red    default ~O
+color index  brightgreen    default ~O
 color index  brightblack    default ~D
 mono bold      bold
 mono underline underline
@@ -64,3 +65,5 @@ bind	pager	<up>	previous-line
 bind	pager	<down>	next-line
 
 # set signature="~/.config/.signature"
+
+#source ~/.config/crypto
