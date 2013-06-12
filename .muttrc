@@ -1,9 +1,10 @@
 # http://www.cublog.cn/u2/73535/showart_1434321.html
 #set strict_mime=no
-set folder=~/.config/Mail
-set record=~/.config/Mail/sent
+#set folder=~/.config/Mail
+set folder=/dev/null
+#set record=~/.config/Mail/sent
 set editor=vim
-# set sort=threads
+set sort=threads
 set check_new=yes
 set charset="utf-8"
 set send_charset="utf-8:big5"
@@ -67,3 +68,4 @@ bind	pager	<down>	next-line
 # set signature="~/.config/.signature"
 
 #source ~/.config/crypto
+source /etc/Muttrc.gpg.dist

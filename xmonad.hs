@@ -58,7 +58,7 @@ myModMask       = mod4Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = ["X", "s", "chrome", "v", "FM", "6", "7", "w", "9"]
+myWorkspaces    = ["X", "s", "chrome", "4", "f", "6", "7", "w", "9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -199,11 +199,11 @@ myLayout = avoidStruts $ tiled ||| Mirror tiled ||| Full
 -- Use ``xprop'' to get the WM_CLASS of an application.
 --
 myManageHook = composeAll
-    [ className =? "Smplayer"		--> doShift "v"
+    [ className =? "Smplayer"		--> doShift "f"
     , className =? "Gimp"		--> doShift "w"
     , className =? "URxvt"		--> doFloat
     , className =? "google-chrome"	--> doShift "chrome"
-    , className =? "Thunar"		--> doShift "FM"
+    , className =? "Thunar"		--> doShift "f"
     , className =? "libreoffice-startcenter"	--> doShift "w"
     , className =? "libreoffice-writer"	--> doShift "w"
     , className =? "libreoffice-impress"	--> doShift "w"

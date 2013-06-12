@@ -20,7 +20,8 @@ xset fp rehash
 xscreensaver &
 
 # background & transparent
-feh --bg-fill ~/Downloads/background/water.jpg
+# feh --bg-fill ~/Downloads/background/water.jpg
+feh --bg-fill ~/Downloads/background/rainflow.jpg
 xcompmgr &
 
 # WM: xmonad

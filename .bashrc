@@ -25,6 +25,7 @@ export GIT_PAGER="less"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PATH="$HOME/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 export PERL_CPANM_OPT="--mirror http://cpan.nctu.edu.tw/ --mirror http://cpan.cpantesters.org/"
+export GOPATH="$HOME/code/Go:$HOME/code/Go/sort_project:$HOME/code/Go/smp_project"
 
 #colorful man
 export LESS_TERMCAP_mb='[38;5;135m'	# begin blinking
