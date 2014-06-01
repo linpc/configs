@@ -68,6 +68,7 @@ fi
 . ~/.myconfig/.bash/power_status.bash
 . ~/.myconfig/.bash/pause.bash
 . ~/.myconfig/.bash/git.bash
+. ~/.myconfig/.bash/svn.bash
 
 if [ -z "$WINDOW" ]; then
 PROMPT_COMMAND='\
