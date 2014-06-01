@@ -11,6 +11,8 @@
 	his = log --stat --no-merges
 	lol = log --oneline --graph --all --decorate
 	glog = log --decorate --graph
+	logp = log -p
+	logs = log --show-signature
 	st = status --short
 	who = shortlog -s --
 	g = log --graph --abbrev-commit --pretty=oneline --decorate
@@ -38,3 +40,5 @@
 
 [i18n]
 	logOutputEncoding = UTF-8
+[commit]
+	gpgsign = true
